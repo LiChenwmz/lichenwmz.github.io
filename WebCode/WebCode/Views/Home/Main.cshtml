@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Main";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>目录</h2>
+<p>这里持续更新我在项目中总结的经验和新颖技术</p>
+<p>而后面的只是分类总结,项目中遇到了问题或者一些特别的难点我就会写进去</p>
+<ol>
+    <li>
+        <a href="@Url.Action("Index", "Main")">策划</a>
+        <ul>
+            <li><a href="@Url.Action("Index", "Main")">PowerDesigner建设数据库</a></li>
+        </ul>
+    </li>
+    <li><a href="javascript:void(0)">正在建设中...</a></li>
+</ol>

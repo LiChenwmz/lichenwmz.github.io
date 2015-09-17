@@ -11,16 +11,140 @@
     <link href="~/Content/Main/Layout/default.min.css" rel="stylesheet" />
     <script src="~/Scripts/Main/Require/require.js"></script>
     <script src="~/Scripts/Main/Require/_Config.js"></script>
+    @RenderSection("styles", false)
+    <style>
+        body {
+            font-family: "微软雅黑";
+        }
+
+        .blog-main img {
+            max-width: 700px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
-    @RenderBody()
-    @*@Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>*@
-    @RenderSection("scripts", required: false)
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                <a class="blog-nav-item" href="@Url.Action("Index", "Home")">Home</a>
+                <a class="blog-nav-item" href="@Url.Action("Main","Home")">Main</a>
+                <a class="blog-nav-item" href="@Url.Action("Web", "Home")">js/Web</a>
+                <a class="blog-nav-item" href="@Url.Action("CSharp", "Home")">C#</a>
+                <a class="blog-nav-item" href="@Url.Action("Mvc", "Home")">Mvc</a>
+                <a class="blog-nav-item" href="@Url.Action("Project", "Home")">Project</a>
+                <a class="blog-nav-item" href="@Url.Action("Tool", "Home")">Tool</a>
+                <a class="blog-nav-item" href="@Url.Action("Other", "Home")">Other</a>
+                <a class="blog-nav-item" href="@Url.Action("About", "Home")">About</a>
+                <a class="blog-nav-item" href="@Url.Action("Teacher_J", "Home")">Teacher_J</a>
+                <a class="blog-nav-item" href="javascript:void(0)"><span id="page"></span><span id="pagesize"></span></a>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="blog-header">
+
+        </div>
+        <div class="row">
+            <div class="col-sm-8 blog-main">
+                @RenderBody()
+            </div>
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                <div class="sidebar-module sidebar-module-inset">
+                    <h4>About</h4>
+                    <p>
+                        我的网站加载和刷新超级快~~~~~~~有木有~~~~~~有木有~~~~~~~~有木有~~~~~
+                        <br /><strong>在这里奉献一些我使用特爽的工具资源以及使用方法</strong>
+                    </p>
+                </div>
+                <div class="sidebar-module">
+                    <h4>Tool</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="http://pan.baidu.com/s/1eQrYoLW" target="_blank"><strong>必应词典</strong></a></li>
+                        <li><a href="http://pan.baidu.com/s/1mghCEJQ" target="_blank"><strong>PowerDesigner</strong></a></li>
+                        <li><a href="http://pan.baidu.com/s/1jGs6cRW" target="_blank"><strong>WebSorm</strong></a></li>
+                    </ol>
+                </div>
+                <div class="sidebar-module">
+                    <h4>UI</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="http://www.bootcss.com/" target="_blank"><strong>BootStrap</strong></a></li>
+                        <li><a href="http://www.telerik.com/aspnet-mvc" target="_blank"><strong>KenDoUI</strong></a></li>
+                    </ol>
+                </div>
+                <div class="sidebar-module">
+                    <h4>Js</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="http://dt.thxopen.com/" target="_blank"><strong>Datatables</strong></a></li>
+                        <li><a href="http://www.requirejs.cn/" target="_blank"><strong>Require</strong></a></li>
+                    </ol>
+                </div>
+                <div class="sidebar-module">
+                    <h4>Elsewhere</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="https://github.com/LiChenwmz">GitHub</a></li>
+                        <li><a href="http://developer.xamarin.com/">Xamarin</a></li>
+                        <li><a href="https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6">C#6.0语法</a></li>
+                        <li><a href="http://www.jquery123.com/">jQuery123</a></li>
+                        <li><a href="http://iconfont.cn/">阿里巴巴矢量图标</a></li>
+                        <li><a href="http://www.imooc.com/course/list">慕课网</a></li>
+                        <li><a href="http://www.manew.com/">Unity3d论坛</a></li>
+                        <li><a href="http://game.ceeger.com/forum/">Unity圣典</a></li>
+                        <li><a hreg="http://www.51zxw.net/list.aspx?cid=454">Unity3D游戏制作教程</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="blog-footer">
+        <p>
+            <a href="javascript:void(0)">李晨</a><span> / </span><a href="javascript:void(0)">SuperCode</a>
+        </p>
+        <p>喜欢就分享给你的朋友吧~</p>
+    </footer>
+    @* ReSharper disable once PossibleNullReferenceException *@
     <script type="text/javascript">
-        require(["Main"])
+        require(["jquery", "Main"], function ($) {
+            @*获得访问的Action*@
+            var x = '@ViewContext.RouteData.Route.GetRouteData(this.Context).Values["action"]';
+            @*判断应该指中那个导航块*@
+            switch (x) {
+                case "Main":
+                    $('a:contains("Main")').addClass("active");
+                    break;
+                case "Web":
+                    $('a:contains("js/Web")').addClass("active");
+                    break;
+                case "CSharp":
+                    $('a:contains("C#")').addClass("active");
+                    break;
+                case "Mvc":
+                    $('a:contains("Mvc")').addClass("active");
+                    break;
+                case "Project":
+                    $('a:contains("Project")').addClass("active");
+                    break;
+                case "Tool":
+                    $('a:contains("Tool")').addClass("active");
+                    break;
+                case "Other":
+                    $('a:contains("Other")').addClass("active");
+                    break;
+                case "About":
+                    $('a:contains("About")').addClass("active");
+                    break;
+                case "Teacher_J":
+                    $('a:contains("Teacher_J")').addClass("active");
+                    break;
+                default:
+                    $('a:contains("Home")').addClass("active");
+                    break;
+            }
+
+
+            @RenderSection("scripts", required: false)
+        })
     </script>
 </body>
 </html>

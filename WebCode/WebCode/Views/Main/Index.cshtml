@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="blog-post">
+    <p>说到策划就不得不说工具了，右侧的PowerDesigner是我用得最顺手的数据库物理数据模型,如下:</p>
+    <img src="~/Image/PD.png" />
+    <p>显示效果如下:</p>
+    <img src="~/Image/PD2.png" />
+    <p>在数据库中的显示效果如下:</p>
+    <img src="~/Image/PD3.png" />
+    <p>以上皆为自己设置的,为了节约网站流量和时间，我在这里只附上链接</p>
+    <ol>
+        <li><a href="http://www.cnblogs.com/netsql/archive/2010/05/19/1739481.html">主键-自增</a></li>
+        <li><a href="http://blog.csdn.net/hongqishi/article/details/7050255">Code-Name不联动修改</a></li>
+        <li><a href="http://blog.sina.com.cn/s/blog_94516a2a0101hpn9.html">表的字段中追加Comment(注释)</a></li>
+        <li><a href="http://blog.csdn.net/smartsmile2012/article/details/7922863">表中把name复制到Comment</a></li>
+    </ol>
+    <p>我现在基本上修改数据库都不需要打开数据库,直接在PD中修改了生成脚本就行,不过值得注意的是,使用脚本在同一数据库中不会重复生成表,会替换，但是数据会消失，所以一旦有添加修改字段什么的请先备份数据</p>
+    <nav>
+        <ul class="pager">
+            <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-arrow-left"></span> 上一页</a></li>
+            <li><a href="javascript:void(0)">下一页 <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+        </ul>
+    </nav>
+</div>
+
+
