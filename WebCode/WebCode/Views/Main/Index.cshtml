@@ -4,12 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="blog-post">
+    <h3>
+        数据库<small> 2015/9/4 <a href="javascript:void(0)">李晨</a></small>
+    </h3>
     <p>说到策划就不得不说工具了，右侧的PowerDesigner是我用得最顺手的数据库物理数据模型,如下:</p>
-    <img src="~/Image/PD.png" />
+    <img src="~/Image/PD.png"/>
     <p>显示效果如下:</p>
-    <img src="~/Image/PD2.png" />
+    <img src="~/Image/PD2.png"/>
     <p>在数据库中的显示效果如下:</p>
-    <img src="~/Image/PD3.png" />
+    <img src="~/Image/PD3.png"/>
     <p>以上皆为自己设置的,为了节约网站流量和时间，我在这里只附上链接</p>
     <ol>
         <li><a href="http://www.cnblogs.com/netsql/archive/2010/05/19/1739481.html">主键-自增</a></li>
@@ -21,7 +24,7 @@
     <nav>
         <ul class="pager">
             <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-arrow-left"></span> 上一页</a></li>
-            <li><a href="javascript:void(0)">下一页 <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+            <li><a href="@Url.Action("Main_Project", "Main")">下一页 <span class="glyphicon glyphicon-arrow-right"></span></a></li>
         </ul>
     </nav>
 </div>
