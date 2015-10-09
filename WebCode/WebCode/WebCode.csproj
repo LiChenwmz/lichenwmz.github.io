@@ -203,6 +203,9 @@
     <Content Include="Image\PD.png" />
     <Content Include="Image\PD2.png" />
     <Content Include="Image\PD3.png" />
+    <Content Include="Image\Project.png" />
+    <Content Include="Image\Project1.png" />
+    <Content Include="Image\Project2.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\Main\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -242,6 +245,7 @@
     <Content Include="Views\Home\Main.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\Teacher\Index.cshtml" />
+    <Content Include="Views\Main\Main_Project.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

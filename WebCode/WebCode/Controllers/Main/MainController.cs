@@ -7,7 +7,12 @@ namespace WebCode.Controllers.Main
         
         public ActionResult Index()
         {
-            return View("");
+            return View();
+        }
+
+        public ActionResult Main_Project()
+        {
+            return View();
         }
     }
 }
