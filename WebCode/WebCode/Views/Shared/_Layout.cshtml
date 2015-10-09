@@ -51,11 +51,12 @@
                 @RenderBody()
             </div>
             <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-                <div class="sidebar-module sidebar-module-inset">
-                    <h4>About</h4>
+                <div class="sidebar-module sidebar-module-inset text-center">
+                    @*<h4>Sign in/Sign Up</h4>登录/注册*@
                     <p>
-                        我的网站加载和刷新超级快~~~~~~~有木有~~~~~~有木有~~~~~~~~有木有~~~~~
-                        <br /><strong>在这里奉献一些我使用特爽的工具资源以及使用方法</strong>
+                        @*TODO 登录/注册需要写*@
+                        <a href="javacript:void(0)" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="登录后可以发表心得和评论~" style="width: 80px">Sign in</a><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="快来加入我们吧~" class="btn btn-default" style="margin-left: 8px; width: 80px">Sign up</a>
+                        <br /><strong></strong>
                     </p>
                 </div>
                 <div class="sidebar-module">
@@ -141,7 +142,7 @@
                     $('a:contains("Home")').addClass("active");
                     break;
             }
-            @*页数判断*@
+            @*TODO 页数判断需要做*@
 
             @RenderSection("scripts", required: false)
         })
