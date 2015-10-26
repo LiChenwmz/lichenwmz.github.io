@@ -180,9 +180,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Admin\AdminLoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Main\MainController.cs" />
-    <Compile Include="Controllers\Teacher\TeacherController.cs" />
+    <Compile Include="Controllers\Web\Main\MainController.cs" />
+    <Compile Include="Controllers\Web\MemberLoginController.cs" />
+    <Compile Include="Controllers\Web\Teacher\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -249,10 +251,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\CSharp\" />
-    <Folder Include="Controllers\Mvc\" />
-    <Folder Include="Controllers\Web\" />
+    <Folder Include="Controllers\Web\CSharp\" />
+    <Folder Include="Controllers\Web\Mvc\" />
     <Folder Include="Scripts\Main\Layout\" />
+    <Folder Include="UpLoad\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\MemberLogin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -261,6 +265,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebCode.Models\WebCode.Models.csproj">
+      <Project>{0EF9B10A-07D0-4849-9C13-CA13BE9956A4}</Project>
+      <Name>WebCode.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebCodeTools\WebCodeTools.csproj">
+      <Project>{d382ba68-0f40-4ea5-b22b-c704755f0016}</Project>
+      <Name>WebCodeTools</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

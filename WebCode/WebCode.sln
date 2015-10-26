@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCode", "WebCode\WebCode.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCode.Models", "WebCode.Models\WebCode.Models.csproj", "{0EF9B10A-07D0-4849-9C13-CA13BE9956A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCodeTools", "WebCodeTools\WebCodeTools.csproj", "{D382BA68-0F40-4EA5-B22B-C704755F0016}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0EF9B10A-07D0-4849-9C13-CA13BE9956A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EF9B10A-07D0-4849-9C13-CA13BE9956A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EF9B10A-07D0-4849-9C13-CA13BE9956A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D382BA68-0F40-4EA5-B22B-C704755F0016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D382BA68-0F40-4EA5-B22B-C704755F0016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D382BA68-0F40-4EA5-B22B-C704755F0016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D382BA68-0F40-4EA5-B22B-C704755F0016}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

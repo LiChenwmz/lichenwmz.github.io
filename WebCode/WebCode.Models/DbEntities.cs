@@ -9,7 +9,8 @@ namespace WebCode.Models
             Database.SetInitializer<DbEntities>(null);
         }
 
-        public virtual DbSet<Curriculum> Curriculums { get; set; }
+        public virtual DbSet<Member> Members { get; set; }
+        public virtual DbSet<MemberLog> MemberLogs { get; set; }
 
     }
 }
