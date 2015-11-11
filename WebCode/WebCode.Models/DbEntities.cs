@@ -10,6 +10,5 @@ namespace WebCode.Models
         }
 
         public virtual DbSet<Curriculum> Curriculums { get; set; }
-
     }
 }
