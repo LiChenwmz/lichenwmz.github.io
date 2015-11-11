@@ -108,7 +108,7 @@
     <script type="text/javascript">
         require(["jquery", "Main"], function ($) {
             @*获得访问的Action*@
-            var x = '@ViewContext.RouteData.Route.GetRouteData(this.Context).Values["action"]';
+            var x = '@ViewContext.RouteData.Route.GetRouteData(Context).Values["action"]';
             @*判断应该指中那个导航块*@
             switch (x) {
                 case "Main":

@@ -7,6 +7,7 @@ namespace WebCode.Controllers.Main
         
         public ActionResult Index()
         {
+            //TODO  这里获得登录人的ID
             return View();
         }
 
